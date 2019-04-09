@@ -12,7 +12,7 @@ class Fish
     return true if @age >=3
   end
 
-  def will_breed?(fish1, fish2, river)
+  def do_breed?(fish1, fish2, river)
     if ((fish1.gender != fish2.gender) && (fish1.can_breed? && fish2.can_breed?)) && river.can_spawn?
       return true
     else
