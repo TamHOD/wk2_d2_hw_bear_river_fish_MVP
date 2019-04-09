@@ -12,4 +12,9 @@ class Bear
     @belly.length
   end
 
+  def eat_a_fish(river, fishes)
+    @belly.push(fishes[0])
+    river.fishes.delete_at(0)
+  end
+
 end
