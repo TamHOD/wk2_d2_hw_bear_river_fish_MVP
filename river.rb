@@ -16,4 +16,7 @@ class River
     @fishes += fishes
   end
 
+  def can_spawn?
+    @spawn_ready
+  end
 end
