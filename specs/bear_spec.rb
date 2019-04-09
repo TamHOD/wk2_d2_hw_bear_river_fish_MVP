@@ -43,4 +43,17 @@ class BearTest < MiniTest::Test
     assert_equal(7, @river.fish_count)
   end
 
+  def test_bear_can_roar
+    assert_equal("Rawr, I'm hungry!", @bear.roar)
+  end
+
+  def test_bear_counts_fish_in_belly
+    @bear.eat_a_fish(@river, @fishes)
+    @bear.eat_a_fish(@river, @fishes)
+    @bear.eat_a_fish(@river, @fishes)
+    response = "I have 3 fish in my belly, I don't need to roar."
+    count = @bear.fish_in_belly_count
+    assert_equal(response, @bear.counts_fish_in_belly(count))
+  end
+
 end

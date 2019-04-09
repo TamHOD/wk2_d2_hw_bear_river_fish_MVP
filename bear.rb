@@ -17,4 +17,16 @@ class Bear
     river.fishes.delete_at(0)
   end
 
+  def roar
+    return "Rawr, I'm hungry!" if @belly == []
+  end
+
+  def counts_fish_in_belly(count)
+    if count >= 1
+      return "I have #{count} fish in my belly, I don't need to roar."
+    else
+      roar
+    end
+  end
+
 end
