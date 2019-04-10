@@ -2,7 +2,7 @@ require("minitest/autorun")
 require("minitest/rg")
 require_relative("../fish")
 require_relative("../river")
-require_relative("../fish")
+
 
 class FishTest < MiniTest::Test
 
@@ -35,7 +35,7 @@ class FishTest < MiniTest::Test
     fish1 = @fish1
     fish2 = @fish4
     river = @river
-    assert_equal(true, ([fish1, fish2]).do_breed?(fish1, fish2, river))
+    assert_equal(true, @fishes.do_breed?(fish1, fish2, river))
   end
 
 end
